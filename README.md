@@ -61,7 +61,7 @@
 所有生產所需檔案均已整理於 [`production/`](production/) 資料夾中，可直接上傳工廠打樣：
 
 - 📦 **Gerber 預備包**：[`production/Gerber_v1.0.zip`](production/Gerber_v1.0.zip)
-- 📊 **物料清單 (BOM)**：[`production/BOM.csv`](production/BOM.csv)
+- 📊 **物料清單 (BOM)**：[`production/BOM.csv`](STM32/Production/BOM.csv.csv)
 - 📄 **原理圖 PDF**：[`docs/schematic.pdf`](docs/schematic.pdf)
 
 ---
