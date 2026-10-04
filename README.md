@@ -50,8 +50,9 @@
 本專案在發布生產檔前已完成嚴格的工程驗證：
 
 - **原理圖 ERC**：通過（0 錯誤，0 警告）。
-- **PCB DRC**：依據 JLCPCB 四層板製程規範檢查通過（0 錯誤，0 警告）。
 
+- **PCB DRC**：四層板製程規範檢查通過（0 錯誤，0 警告）。
+STM32/Docs/Image/DRC.png 
 ![DRC 檢查結果截圖](docs/drc_report.png)
 
 ---
@@ -62,7 +63,7 @@
 
 - 📦 **Gerber 預備包**：[`production/Gerber_v1.0.zip`](production/Gerber_v1.0.zip)
 - 📊 **物料清單 (BOM)**：[`production/BOM.csv`](STM32/Production/BOM.csv.csv)
-- 📄 **原理圖 PDF**：[`docs/schematic.pdf`](docs/schematic.pdf)
+- 📄 **原理圖 PDF**：[`docs/schematic.pdf`](STM32/Docs/Schematic.pdf/Schematic.pdf.pdf)
 
 ---
 
@@ -70,12 +71,11 @@
 
 ```text
 ├── docs/                      # 相關圖檔與文件
-│   ├── drc_report.png         # DRC 零錯誤驗證截圖
+│   ├── drc.png                # DRC 零錯誤驗證截圖
+│   ├── erc.png                # 層疊結構截圖
 │   ├── stackup.png            # 層疊結構截圖
 │   └── schematic.pdf          # 原理圖 PDF 檔
 ├── production/                # 工廠打樣與生產檔
 │   ├── Gerber_v1.0.zip        # Gerber 與鑽孔檔案包
 │   ├── BOM.csv                # 含 LCSC 料號的零件清單
-│   └── ibom.html              # 互動式 HTML BOM
 ├── README.md                  # 專案說明文件
-└── LICENSE                    # 開源硬體授權條款
