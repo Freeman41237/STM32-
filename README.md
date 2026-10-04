@@ -1,11 +1,7 @@
 # STM32-
-STM32 4-Layer Minimal System Board design
 
-# 🚀 [專案名稱]
 
-![License](https://img.shields.io/badge/License-CC--BY--4.0-blue.svg)
-![EDA](https://img.shields.io/badge/EDA-EasyEDA%20Pro-orange.svg)
-![PCB Status](https://img.shields.io/badge/PCB-Manufacture%20Ready-brightgreen.svg)
+# 🚀 [STM32 4-Layer Minimal System Board design]
 
 [這裡用 1~2 句話簡述專案用途] 例如：基於 ESP32-S3 的高性能四層板設計，專為低噪聲與高訊號完整性優化，符合嘉立創 (JLCPCB) 生產規範。
 
@@ -66,7 +62,6 @@ STM32 4-Layer Minimal System Board design
 
 - 📦 **Gerber 預備包**：[`production/Gerber_v1.0.zip`](production/Gerber_v1.0.zip)
 - 📊 **物料清單 (BOM)**：[`production/BOM.csv`](production/BOM.csv)
-- 🌐 **互動式 BOM (iBOM)**：🔗 [點此開啟線上焊盤對照表](https://htmlpreview.github.io/?https://github.com/YourUsername/YourRepo/blob/main/production/ibom.html)
 - 📄 **原理圖 PDF**：[`docs/schematic.pdf`](docs/schematic.pdf)
 
 ---
