@@ -52,8 +52,7 @@
 - **原理圖 ERC**：通過（0 錯誤，0 警告）。
 
 - **PCB DRC**：四層板製程規範檢查通過（0 錯誤，0 警告）。
-STM32/Docs/Image/DRC.png 
-![DRC 檢查結果截圖](STM32/Docs/Image/DRC.png)
+- 📄 **DRC 檢查結果截圖**：[`STM32/Docs/Image/DRC.png`](STM32/Docs/Image/DRC.png)
 
 ---
 
