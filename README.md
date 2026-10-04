@@ -48,9 +48,8 @@
 ## 🔍 設計驗證與品質 (Quality Verification)
 
 本專案在發布生產檔前已完成嚴格的工程驗證：
-
 - **原理圖 ERC**：通過（0 錯誤，0 警告）。
-
+- 📄 **DRC 檢查結果截圖**：[`STM32/Docs/Image/ERC.png`](STM32/Docs/Image/ERC.png)
 - **PCB DRC**：四層板製程規範檢查通過（0 錯誤，0 警告）。
 - 📄 **DRC 檢查結果截圖**：[`STM32/Docs/Image/DRC.png`](STM32/Docs/Image/DRC.png)
 
