@@ -3,16 +3,19 @@
 
 # 🚀 [STM32 4-Layer Minimal System Board design]
 
-[這裡用 1~2 句話簡述專案用途] 例如：基於 ESP32-S3 的高性能四層板設計，專為低噪聲與高訊號完整性優化，符合嘉立創 (JLCPCB) 生產規範。
+本專案為基於 **STM32F4 (ARM Cortex-M4)** 的高性能微控制器開發板，採用 4 層板架構設計。
+整合完整接地平面 (GND) 與 3.3V 電源平面、USB Type-C 介面及 SWD 偵錯埠，適合用於嵌入式系統開發、物聯網驗證的實驗專案。
 
 ---
 
 ## 📌 專案特點 (Features)
 
-- **標準 4 層板架構**：具備完整的接地平面 (GND) 與電源平面 (3V3)，提供極佳的 EMC/EMI 表現與低噪聲環境。
-- **極小化板型設計**：尺寸僅 [例如：50mm x 30mm]。
-- **生產即戰力 (Production Ready)**：已通過完整原理圖 ERC 與 PCB DRC 檢查（0 Errors, 0 Warnings）。
-- **完整物料備齊**：BOM 表已包含立創 (LCSC) 零件料號，方便直接進行 SMT 貼片打樣。
+- **高性能 STM32F4 核心**：採用 ARM Cortex-M4 架構主控，具備浮點運算單元 (FPU) 與高時脈運算能力。
+- **標準 4 層板結構優化**：採用完整接地平面 (GND) 與 3.3V 電源平面，顯著提升 EMI/EMC 效能並降低電源噪聲。
+- **USB Type-C 介面**：支援 5V 供電與 USB 數據通訊，板載高效率 LDO 轉 3.3V 穩壓電路。
+- **標準 SWD 偵錯介面**：引出 SWDIO / SWCLK 腳位，方便使用 ST-Link / J-Link 進行快速程式燒錄與除錯。
+- **生產即戰力 (Production Ready)**：通過完整原理圖 ERC 與 PCB DRC 檢查（0 Errors, 0 Warnings），符合嘉立創打樣規範。
+- **物料與焊接優化**：元件 BOM 表包含立創 (LCSC) 料號，並提供 Interactive HTML BOM (iBOM) 方便手動焊接對照。
 
 ---
 
@@ -20,28 +23,29 @@
 
 | 參數 | 規格細節 |
 | :--- | :--- |
-| **主控晶片 (MCU)** | [例如：ESP32-S3-WROOM-1 / STM32F4] |
-| **輸入電源** | 5V DC (透過 USB Type-C 或外接端子) |
+| **主控晶片 (MCU)** | STM32F4 系列 (LQFP 封裝) |
+| **輸入電源** | 5V DC (經由 USB Type-C 介面) / LDO 轉 3.3V 系統供電 |
+| **通訊與偵錯介面** | USB 2.0 Full-Speed, SWD 偵錯介面 |
 | **板層結構** | 4 層板 (Top, GND, 3V3, Bottom) |
-| **總板厚度** | 1.6258 mm (標準板厚) |
+| **層疊範本** | JLCPCB `JLC04161H-7628` (Default) |
+| **總板厚度** | 1.6258 mm |
 | **成品銅厚** | 1 oz (0.035 mm) |
 | **最小線寬 / 線距**| 6 mil / 6 mil |
-
+| **最小鑽孔 / 焊盤**| 0.3 mm / 0.5 mm (Via) |
+| **板材材質** | FR-4 (Tg 130-140) |
 ---
 
 ## 🥞 PCB 層疊結構 (Stackup)
 
-採用 **嘉立創 JLCPCB `JLC041611-7628 (Default)`** 標準四層板疊層範本：
-
 | 圖層 (Layer) | 類型 | 材質 | 厚度 (mm) | 作用與說明 |
 | :--- | :--- | :--- | :--- | :--- |
-| **頂層 (L1 - Top)** | 銅箔 (Copper) | 外層銅箔 | 0.035 | 訊號走線與高速線路 |
-| 介質層 1 (Dielectric 1) | 絕緣基材 | 7628 半固化片 | 0.2104 | 絕緣介質 |
-| **內層 1 (L2 - GND)** | 銅箔 (Copper) | 內層銅箔 | 0.035 | **完整接地參考平面 (GND)** |
-| 介質層 2 (Dielectric 2) | 絕緣基材 | 1.1mm FR-4 板芯 | 1.065 | 主核心基板 |
-| **內層 2 (L3 - 3V3)** | 銅箔 (Copper) | 內層銅箔 | 0.035 | **3.3V 主電源平面** |
-| 介質層 3 (Dielectric 3) | 絕緣基材 | 7628 半固化片 | 0.2104 | 絕緣介質 |
-| **底層 (L4 - Bottom)**| 銅箔 (Copper) | 外層銅箔 | 0.035 | 電源走線與輔助佈線 |
+| **頂層 (L1 - Top Layer)** | 銅箔 (Copper) | Outer layer thickness | 0.035 | 訊號走線與元件貼片層 |
+| 介質層 1 (Dielectric1) | 絕緣基材 (Substrate) | 7628 RC49% 8.6mil | 0.2104 | 絕緣介質 |
+| **內層 1 (L2 - GND)** | 銅箔 (Copper) | - | 0.035 | **完整接地參考平面 (GND)** |
+| 介質層 2 (Dielectric2) | 絕緣基材 (Substrate) | 1.1mm H/HOZ Copper | 1.065 | 主核心基板 (FR-4 Core) |
+| **內層 2 (L3 - 3V3)** | 銅箔 (Copper) | - | 0.035 | **3.3V 主電源平面** |
+| 介質層 3 (Dielectric3) | 絕緣基材 (Substrate) | 7628 RC49% 8.6mil | 0.2104 | 絕緣介質 |
+| **底層 (L4 - Bottom Layer)**| 銅箔 (Copper) | Outer layer thickness | 0.035 | 電源走線與輔助佈線層 |
 
 ---
 
