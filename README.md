@@ -61,7 +61,7 @@
 所有生產所需檔案均已整理於 [`production/`](production/) 資料夾中，可直接上傳工廠打樣：
 
 - 📊 **物料清單 (BOM)**：[`production/BOM.csv`](STM32/Production/BOM.md)
-- 📄 **原理圖 PDF**：[`docs/schematic.pdf`](STM32/Docs/Schematic.pdf/Schematic.pdf.pdf)
+- 📄 **原理圖 PDF**：[`docs/schematic.pdf`](STM32/Docs/Schematic.pdf.pdf)
 
 ---
 
