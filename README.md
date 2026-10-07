@@ -60,7 +60,7 @@
 
 所有生產所需檔案均已整理於 [`production/`](production/) 資料夾中，可直接上傳工廠打樣：
 
-- 📊 **物料清單 (BOM)**：[`production/BOM.csv`](STM32/Production/BOM.csv.csv)
+- 📊 **物料清單 (BOM)**：[`production/BOM.csv`](STM32/Production/BOM.md)
 - 📄 **原理圖 PDF**：[`docs/schematic.pdf`](STM32/Docs/Schematic.pdf/Schematic.pdf.pdf)
 
 ---
@@ -75,5 +75,5 @@
 │   └── schematic.pdf          # 原理圖 PDF 檔
 ├── production/                # 工廠打樣與生產檔
 │   ├── Gerber_v1.0.zip        # Gerber 與鑽孔檔案包
-│   ├── BOM.csv                # 零件清單
+│   ├── BOM.md                 # 零件清單
 ├── README.md                  # 專案說明文件
